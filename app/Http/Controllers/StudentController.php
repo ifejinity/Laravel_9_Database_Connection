@@ -10,7 +10,8 @@ class StudentController extends Controller
 
         $data = Students::all();
         // $data = Students::where('first_name', 'like', 'a%')->get();
-        return view('students.index', ['students' =>$data]);
+        return view('students.index')
+            ->with(['students' =>$data]);
     }
 }
 
